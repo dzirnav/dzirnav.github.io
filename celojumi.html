@@ -79,5 +79,40 @@ logs.addEventListener("click", (event) => {
 </script>
 
 
+<!-- Fotogrāfiju pārslēgšana ar bultiņām -->
+<script>
+const bildes = Array.from(
+    document.querySelectorAll(".galerija img")
+);
+
+document.addEventListener("keydown", (event) => {
+    const logs = document.getElementById("foto-logs");
+
+    if (!logs.open) return;
+
+    if (event.key !== "ArrowLeft" &&
+        event.key !== "ArrowRight") return;
+
+    event.preventDefault();
+
+    const lielais = document.getElementById("lielais-foto");
+
+    let numurs = bildes.findIndex(
+        foto => foto.src === lielais.src
+    );
+
+    if (numurs === -1) return;
+
+    if (event.key === "ArrowRight") {
+        numurs = (numurs + 1) % bildes.length;
+    } else {
+        numurs = (numurs - 1 + bildes.length) % bildes.length;
+    }
+
+    lielais.src = bildes[numurs].src;
+    lielais.alt = bildes[numurs].alt;
+});
+</script>
+
 </body>
 </html>
