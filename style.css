@@ -47,3 +47,11 @@ section {
 section h2 {
     color: #164a80;
 }
+
+.mana-foto {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
