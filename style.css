@@ -48,10 +48,14 @@ section h2 {
     color: #164a80;
 }
 
+
 .mana-foto {
+    display: block;
     width: 100%;
-    max-width: 700px;
+    max-width: 450px;
     height: auto;
+    margin: 15px auto;
     border-radius: 10px;
 }
+
 
