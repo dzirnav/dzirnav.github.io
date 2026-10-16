@@ -13,3 +13,24 @@ h1 {
 p {
     font-size: 20px;
 }
+
+nav {
+    background-color: #164a80;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    display: inline-block;
+    padding: 8px;
+}
+
+nav a:hover {
+    background-color: #2874b8;
+    border-radius: 5px;
+}
