@@ -146,3 +146,43 @@ section h2 {
     }
 }
 
+/* Fotogrāfiju palielināšana */
+
+.galerija img {
+    cursor: zoom-in;
+}
+
+#foto-logs {
+    position: fixed;
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+}
+
+#foto-logs::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#lielais-foto {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#foto-aizvert {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 28px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

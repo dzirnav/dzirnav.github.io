@@ -51,6 +51,33 @@
     </div>
 </section>
 
+<!-- Fotogrāfijas palielināšanas logs -->
+<dialog id="foto-logs">
+    <button id="foto-aizvert" aria-label="Aizvērt">×</button>
+    <img id="lielais-foto" alt="Palielināta fotogrāfija">
+</dialog>
+
+<script>
+const logs = document.getElementById("foto-logs");
+const lielais = document.getElementById("lielais-foto");
+
+document.querySelectorAll(".galerija img").forEach(foto => {
+    foto.addEventListener("click", () => {
+        lielais.src = foto.src;
+        lielais.alt = foto.alt;
+        logs.showModal();
+    });
+});
+
+document.getElementById("foto-aizvert").addEventListener("click", () => {
+    logs.close();
+});
+
+logs.addEventListener("click", (event) => {
+    if (event.target === logs) logs.close();
+});
+</script>
+
 
 </body>
 </html>
